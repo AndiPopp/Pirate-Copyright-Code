@@ -1,0 +1,41 @@
+\documentclass[a5paper,openany]{scrbook}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[english]{babel}
+\useshorthands{’}
+\defineshorthand{’S}{\Sentence\ignorespaces}
+\defineshorthand{’.}{. \Sentence\ignorespaces}
+
+\usepackage{graphicx}
+
+\usepackage{blindtext}
+\usepackage[textwidth=12cm,textheight=15cm,centering]{geometry}
+
+
+\usepackage[ref=numeric]{scrjura}
+\setkeys{contract}{preskip=\baselineskip, postskip=0\baselineskip}
+
+\renewcommand{\sentencename}{Clause}
+\renewcommand{\parname}{Paragraph}
+
+\setlength{\parskip}{.5\baselineskip plus .2\baselineskip minus .1\baselineskip}
+\setlength{\parindent}{0em}
+
+\usepackage{hyperref}
+\usepackage{enumitem}
+
+\newenvironment{legalenum}
+{%begin
+%	\begin{enumerate}[nolistsep,label=\hspace{1em}\alph*.,align=left,beginpenalty=10000]
+	\begin{enumerate}[nolistsep,label=\alph*.,labelindent=1em,labelsep=*,align=left,beginpenalty=10000]
+}{%end
+	\end{enumerate}
+}
+
+\hyphenation{WITTEM}
+
+\newcommand{\WCPRVersion}{}
+\newcommand{\SetWCPRVersion}[1]{
+	\renewcommand{\WCPRVersion}{#1}
+}

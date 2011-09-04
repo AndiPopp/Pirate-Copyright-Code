@@ -1,0 +1,84 @@
+\subsection{Political Goals for Version 1}
+
+For the first version we want to implement two major demands of the Pirate Party for a new copyright: free\footnote{free as in ``free speech'' not as in ``free beer''} private use and notably shorter copyright duration (at least for economic rights). The latter proved a bit tricky. Very short copyright duration as we had in mind is a problem for copyleft licensing like the GPL or the Creative Commons licenses with the attribute ``SA''. E.g. with a five year duration, proprietary software could build on five year old open source code without publishing its own code. 
+
+Since supporting free software (and implicitly other open content) is also part of the Pirate Party's political platform we wanted to fix that. We took up an idea mentioned by a few pirates and Richard~M. Stallman, the founder of the free software foundation. It specifies that the duration of the economic rights of copyright on a work should depend on how many rights the creator wants to monopolize for himself. That way free software would benefit from a maximum duration. We especially liked the idea, because it replaces the notion of ``intellectual property''(sic!) with a notion of a commercial support law. The creator can decide for himself if he wants to use this law with many privileged rights in a short amount of time or vice versa. 
+
+But again this brought up another problem. The actual copyright duration would depend on the license the work is published under, but a work could actually be published under many different licenses. We therefore need some kind of default license with all the required information. For this we implemented a copyright declaration which is necessary to claim copyright on a work. This again proofed a lucky hit since we now implemented another demand by a lot of modern copyright supporters by making the public domain the default for each work.
+
+Finally we thought about the practical implementation of the code. Since notably shorter duration of economic rights is hard to digest for many people, who have been raised with the old copyright notion. The image of a living author not benefiting from an exploitation of his work is still not acceptable for many. Therefore we used subsequent exploitation regulations for the case the economic rights expired with the author still living.
+
+\subsubsection{Private Use}
+
+Private use could be considered \textit{the} core demand on copyright of the Pirate Party platform. In former times, notable copyright infringements have always appeared in public space, like unauthorised concerts or selling of unauthorised copies on flea markets. Nowadays copyright is abused to harass normal people because of their actions in their private space, especially file sharing. Even demands for further measures like ``Three Strikes'' or web censoring come up.
+
+Copyright does not have to be abolished as a whole but it has to be made clear, that it is inferior to civil rights, especially privacy, which includes data traffic from or to a computer in private use. Therefore copy right may not effect the private space. Note that private use does not only affect the right of reproduction but at least all economic rights. A private person must not be prosecuted because of singing a copyrighted song in the subway or translating a book for his or her personal use. 
+
+The most important question which has to be answered in this context is: What exactly qualifies as private use? 
+
+Let us first define commercial use. Commercial use is defined as every use that has the intention of generating \textit{monetary profit} or aiding in the generation of monetary profit. It specifies that in commercial use the use of the work itself is not the primary objective, but the earning of money. Private use is then defined as the opposite of commercial use.
+
+\subsubsection{The Copyright Declaration}
+
+This is a major change to current copyright legislation and a break with the outdated international treaties. The current copyright is modeled after the interests of the people who want to claim the the rights granted by copyright. Therefore each work automatically has ``all rights reserved''. Authors who want to contribute to the public pool of culture and knowledge have to use special licenses like ``Creative Commons'' to do so. Furthermore these licenses have to include clauses which need the users of those works to mark them, for everyone to know that theses works are free, since otherwise they would have to assume the work has ``all rights reserved''. 
+
+The reason for this state of the copyright is the notion of ``intellectual property'', which can be falsified with proper property theory. The reason for establishing a copyright, is the quite selfish interest of the society to have new works. While the fulfillment of this need may be supported by establishing a copyright, the obstruction of authors who want to contribute to the freely available pool of culture and knowledge surely does not.
+
+Therefore the public domain has to be the default for all works. To get copyright protection on a work the creator has to file a copyright declaration. The open questions to this topic are:
+\begin{itemize}
+	\item Which information is needed in the copyright declaration?
+	\item How can the work be linked to the copyright declaration?
+\end{itemize}
+
+Let's start with the first question. Obviously the first piece of information needed, is the reference data of the work:
+\begin{itemize}
+	\item title
+	\item type of work
+	\item author
+	\item date of publishing
+\end{itemize}
+To anticipate the next section, there is also the need of choosing the claimed monopoly rights for the work. 
+\begin{itemize}
+	\item If the right to make derivative works is granted for free
+	\item If the right of commercial use is granted for free
+	\item If the author obliges to publish all his source material
+	\item Special default restrictions of use (e.g. copyleft)
+\end{itemize}
+This way the copyright declaration also functions as a general license.
+
+This brings us to the second question now. Since without the copyright declaration the work is public domain, we have to give the author a possibility to link his work to the delcaration. So for the work to be excluded form public domain, the work itself has to be marked with a copyright claim (i.e. in the work itself or in the meta data). This copyright claim has to be included with every distribution including private use distribution, removing it is illegal (this is best enforced with notice and takedown). The copyright declaration can than be published anywhere where it can be foud by everyone. While the best way to implement the latter might be a central copyright registration administration, this is an executive question, not a legislative and we therefore exclude it in this context. 
+
+\subsubsection{Incremental Economic Rights Duration}
+
+The implementation of incremental economic rights duration follows the claimed monopoly rights of the former section. For a basic duration, we consider 5~years a good value, since private use is already granted by this code. The duration is extended with every not monopolized right. The granting of the first two rights ``free derivative works'' and ``free commercial use'' should give another 5~years each.
+
+A special case ist the last item, the authors obligation to publish all his sources. We especially want to encourage the authors to do so, since public sources are not only a source for personal education, they enable the user to modifiy the work for his own personal use. A typsetted book can easily be converted to a digital reader format, software can be ported from one platform to another. We therefore want to grant another 10~years for this obligation.
+
+The creators of some types of work, e.g. paintings, might find it very easy to fulfill this obligation, since the work is the source in itself. This also applies for many types of plain text. Some might argue, that theses authors get the duration extension for free, but we should not harm those authors, who are not able to withhold their sources by default.
+
+%\subsubsection{Subsequent Exploitation}
+
+%Incremental economic rights duration is accompanied by a reform of the length of economic rights duration itself and the starting point of its expiration. Unlike the TRIPS treaty this reform uncouples economic rights duration from the authors life time. This is only fair, because there is no reason, why young authors should profit more from copyright than old ones. But since the image of a living author not profiting from commercial exploitation of ``his'' work is still alienating many people who where raised with the old copyright notion, we want to implement a compensation.
+
+%The most important point in short duration of economic rights is to give the work back into public domain (at least partially). This mainly means the author (resp. other holder of the economic rights) should not be allowed to exclude anyone from using his work anymore. Note that since private use is already granted, we talk about commercial use here. Between the expiration of the economic rights and the death of the author, we put the work into the state of subsequent exploitation. In this time period noone needs to ask the author's permission to use the work in a commercial context anymore but is obliged to give a share of his revenue to the author. This share should be relatively small, so that the economic possibilities to use the work are considerably better than during the economic rights duration. A public authority should be entitled to define this minimum share. Collection of these shares could for example be handeld by a collecting society.
+
+\subsection{Code Modifications for Version 1}
+
+\subsubsection{Private Use}
+
+For the implementation private use, we inserted a paragraph into Art.~15 (now Art.~\refParagraphN{Par:EconomicRightsGeneral}) which limits the economic rights to commercial use and defines commercial use.
+
+Furthermore we had to remove Art.~23~(2) (now Art.~\refParagraphN{Par:UsesPermittedToPromoteSocialPoliticalAndCulturalObjectives}), because the private reproduction mentioned in number $a$ is now already granted. The educational use in number $b$ is also already granted, if the educational use is not commercial. The corresponding references in Art.~27 (now Art.~\refParagraphN{Par:AmountAndCollectionOfRemuneration}) and Art.~28 (now Art.~\refParagraphN{Par:LimitationsPrevailingOverTechnicalMeasures}) also had to be removed.
+
+\subsubsection{The Copyright Declaration}
+
+The idea is implemented in the new Art.~\refParagraphN{Par:ClaimingAndDurationOfEconomicRights}.
+
+\subsubsection{Incremental Copyright Duration}
+
+The idea is implemented in the new Art.~\refParagraphN{Par:ClaimingAndDurationOfEconomicRights}.
+
+%\subsubsection{Subsequent Exploitation}
+
+%The idea is implemented in the new Art.~\refParagraphN{Par:SubsequentExploitation}.
+
