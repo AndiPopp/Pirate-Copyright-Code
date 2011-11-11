@@ -3,9 +3,6 @@
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage[english]{babel}
-\useshorthands{’}
-\defineshorthand{’S}{\Sentence\ignorespaces}
-\defineshorthand{’.}{. \Sentence\ignorespaces}
 
 \usepackage{graphicx}
 
@@ -16,8 +13,16 @@
 \usepackage[ref=numeric]{scrjura}
 \setkeys{contract}{preskip=\baselineskip, postskip=0\baselineskip}
 
+\useshorthands{’}
+\defineshorthand{’S}{\Sentence\ignorespaces}
+\defineshorthand{’.}{. \Sentence\ignorespaces}
+
 \renewcommand{\sentencename}{Clause}
 \renewcommand{\parname}{Paragraph}
+\renewcommand{\S}{Art.}
+
+\paragraphmark{Test}
+
 
 \setlength{\parskip}{.5\baselineskip plus .2\baselineskip minus .1\baselineskip}
 \setlength{\parindent}{0em}
