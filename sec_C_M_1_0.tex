@@ -1,10 +1,11 @@
+%!TEX root = Pirate_Copyright_Code.tex
 \subsection{Political Goals for Version 1}
 
 For the first version we want to implement two major demands of the Pirate Party for a new copyright: free\footnote{free as in ``free speech'' not as in ``free beer''} private use and notably shorter copyright duration (at least for economic rights). The latter proved a bit tricky. Very short copyright duration as we had in mind is a problem for copyleft licensing like the GPL or the Creative Commons licenses with the attribute ``SA''. E.g. with a five year duration, proprietary software could build on five year old open source code without publishing its own code. 
 
-Since supporting free software (and implicitly other open content) is also part of the Pirate Party's political platform we wanted to fix that. We took up an idea mentioned by a few pirates and Richard~M. Stallman, the founder of the free software foundation. It specifies that the duration of the economic rights of copyright on a work should depend on how many rights the author wants to monopolize for himself. That way free software would benefit from a maximum duration. We especially liked the idea, because it replaces the notion of ``intellectual property''(sic!) with a notion of a commercial support law. The author can decide for himself if he wants to use this law with many privileged rights in a short amount of time or vice versa. 
+Since supporting free software (and implicitly other open content) is also part of the Pirate Party's political platform we wanted to address that. We took up an idea mentioned by a few pirates and Richard~M. Stallman, the founder of the free software foundation. It specifies that the duration of the economic rights of copyright on a work should depend on how many rights the author wants to monopolize for himself. That way free software would benefit from a maximum duration. We especially liked the idea, because it replaces the notion of ``intellectual property''(sic!) with a notion of a commercial support law. The author can decide for himself if he wants to use this law with many privileged rights in a short amount of time or vice versa. 
 
-But again this brought up another problem. The actual copyright duration would depend on the license the work is published under, but a work could actually be published under many different licenses. We therefore need some kind of default license with all the required information. For this we implemented a copyright declaration which is necessary to claim copyright on a work. This again proofed a lucky hit since we now implemented another demand by a lot of modern copyright supporters by making the public domain the default for each work.
+But again this brought up another problem. The actual copyright duration would depend on the license the work is published under, but a work could actually be published under many different licenses. We therefore need some kind of default license with all the required information. For this we implemented a copyright declaration which is necessary to claim copyright on a work. This again proved a lucky hit since we now implemented another demand of a lot of modern copyright supporters by making the public domain the default for each work.
 
 Finally we thought about the practical implementation of the code. Since notably shorter duration of economic rights is hard to digest for many people, who have been raised with the old copyright notion. The image of a living author not benefiting from an exploitation of his work is still not acceptable for many. Therefore we used subsequent exploitation regulations for the case the economic rights expired with the author still living.
 
@@ -24,7 +25,7 @@ This is a major change to current copyright legislation and a break with the out
 
 The reason for this state of the copyright is the notion of ``intellectual property'', which can be falsified with proper property theory. The reason for establishing a copyright, is the quite selfish interest of the society to have new works. While the fulfillment of this need may be supported by establishing a copyright, the obstruction of authors who want to contribute to the freely available pool of culture and knowledge surely does not.
 
-Therefore the public domain has to be the default for all works. To get copyright protection on a work the author has to file a copyright declaration. The open questions to this topic are:
+Therefore the public domain has to be the default for all works. To get copyright protection on a work the author has to file a copyright declaration. The open questions on this topic are:
 \begin{itemize}
 	\item Which information is needed in the copyright declaration?
 	\item How can the work be linked to the copyright declaration?
@@ -54,7 +55,7 @@ The implementation of incremental economic rights duration follows the claimed m
 
 A special case ist the last item, the authors obligation to publish all his sources. We especially want to encourage the authors to do so, since public sources are not only a source for personal education, they enable the user to modifiy the work for his own personal use. A typsetted book can easily be converted to a digital reader format, software can be ported from one platform to another. We therefore want to grant another 10~years for this obligation.
 
-The authors of some types of work, e.g. paintings, might find it very easy to fulfill this obligation, since the work is the source in itself. This also applies for many types of plain text. Some might argue, that theses authors get the duration extension for free, but we should not harm those authors, who are not able to withhold their sources by default.
+The authors of some types of work, e.g. paintings, might find it very easy to fulfill this obligation, since the work is the source in itself. This also applies for many types of plain text. Some might argue that theses authors get the duration extension for free, but we should not harm those authors, who are not able to withhold their sources by default.
 
 \subsection{Code Modifications for Version 1}
 
